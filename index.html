@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>one little question 💗</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <div class="top"><div class="logo"><i>♥</i>one little question</div><div class="bar" id="bar"><span class="on"></span><span></span><span></span><span></span></div></div>
+  <div class="card">
+
+    <section class="step on" id="s1">
+      <div class="sticker">psst… choose wisely</div>
+      <div class="eyebrow">A very important question</div>
+      <h1>Hey <span id="nm">Lumaya</span>…</h1>
+      <div class="nick">♡ (my sweet little Batti) ✦</div>
+      <p>I have a very important question for you…</p>
+      <div class="q">Will you go on a date with me? 😄🌹✨</div>
+      <div class="row">
+        <button class="btn yes" id="yes">YES</button>
+        <button class="btn no" id="no">NO</button>
+      </div>
+      <p class="note">There is, of course, only one correct answer… 💗</p>
+      <div class="chips"><span>good snacks</span><span>soft playlists</span><span>terrible jokes</span></div>
+    </section>
+
+    <section class="step" id="s2">
+      <div class="eyebrow center">Step two · choose the vibe</div>
+      <div class="center"><h2>Where do you want to go?</h2><p>Pick our little date adventure. I promise I'll bring the good company — and the butterflies. 🦋</p></div>
+      <button class="opt c1" data-v="Movie"><span class="ic">🎬</span><span><b>Movie</b><small>Popcorn + you + me</small></span></button>
+      <button class="opt c2" data-v="Picnic"><span class="ic">🧺</span><span><b>Picnic</b><small>A cozy afternoon in nature</small></span></button>
+      <button class="opt c3" data-v="Dinner"><span class="ic">🕯️</span><span><b>Dinner</b><small>A romantic evening together</small></span></button>
+      <!-- Ice Cream Option -->
+      <button class="opt c4" data-v="Ice Cream"><span class="ic">🍦</span><span><b>Ice Cream</b><small>Sweet treats & sweet moments</small></span></button>
+      <button class="btn wide" id="n2" disabled>Continue 💗</button>
+    </section>
+
+    <section class="step" id="s3">
+      <div class="eyebrow center">Step three · make it real</div>
+      <div class="center"><h2>So… when are you free?</h2><p>Choose a date and a time that feels just right.</p></div>
+      <div class="cal">
+        <div class="cal-header">
+          <div class="cal-selects">
+            <select id="month-select" class="cal-select"></select>
+            <select id="year-select" class="cal-select"></select>
+          </div>
+          <small>OUR LITTLE DATE</small>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+      
+      <h3 style="font-family:var(--serif);font-weight:500;margin:18px 0 0;font-size:20px">When should I save you?</h3>
+      <div class="time-input-wrap">
+        <input type="text" id="custom-time" placeholder="Type time here (e.g. 6:30 PM)" class="time-input" />
+      </div>
+
+      <h3 style="font-family:var(--serif);font-weight:500;margin:18px 0 0;font-size:20px">Special Notes</h3>
+      <div class="notes-wrap">
+        <textarea id="notes" placeholder="Any special notes? (optional)" class="notes-input"></textarea>
+      </div>
+
+      <button class="btn wide" id="n3" disabled>Set the date 💓</button>
+    </section>
+
+    <section class="step center" id="s4">
+      <div class="badge">❤️</div>
+      <div class="eyebrow">The best kind of news</div>
+      <h2>It's officially a date!</h2>
+      <div class="quote">I'm already smiling. Here's what we've got planned — and I may already be planning the playlist:</div>
+      <div class="sum">
+        <div><span>📍 DESTINATION</span><b id="o1"></b></div>
+        <div><span>📅 DATE</span><b id="o2"></b></div>
+        <div><span>⏰ TIME</span><b id="o3"></b></div>
+        <div id="notes-box" style="display:none"><span>📝 SPECIAL NOTES</span><b id="o4"></b></div>
+      </div>
+      <p>I can't wait to see you! 🌹<br>You + Me = ❤️</p>
+      <div class="fin"><button class="btn yes" id="yay">Yay, us! 💗</button><a id="again">Choose again</a></div>
+    </section>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+:root{
+  color-scheme:light;
+  --bg:#fff1ee;
+  --card:#fffaf8;
+  --ink:#2e1428;
+  --rose:#9b2c55;
+  --soft:#f9d9dd;
+  --lav:#e7dcf5;
+  --sun:#fde6bd;
+  --mint:#d8f3dc; /* Ice Cream කාඩ්පත සඳහා pastel mint පැහැය */
+  --muted:#7a6270;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  background:radial-gradient(circle at 10% 0,#ffd9df 0,transparent 40%),radial-gradient(circle at 100% 100%,#e9ddf7 0,transparent 45%),var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  padding:16px;
+}
+.app{width:100%;max-width:440px;position:relative}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-size:14px;font-weight:700}
+.logo i{background:var(--rose);color:#fff;width:26px;height:26px;border-radius:9px;display:grid;place-items:center;font-style:normal;font-size:13px}
+.bar{flex:1;display:flex;gap:6px}
+.bar span{flex:1;height:4px;border-radius:4px;background:#ecd2d6;transition:.4s}
+.bar span.on{background:var(--rose)}
+.card{
+  background:var(--card);
+  border-radius:28px;
+  padding:26px 22px;
+  box-shadow:0 10px 40px rgba(155,44,85,.12);
+  border:1px solid #f6dfe0;
+  position:relative;
+  overflow:hidden;
+  min-height:480px;
+}
+.step{display:none;animation:in .5s ease}
+.step.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);font-weight:700;margin-bottom:14px}
+.eyebrow:before{content:"— "}
+h1,h2{font-family:var(--serif);font-weight:500;line-height:1.1}
+h1{font-size:44px}h2{font-size:34px;text-align:center}
+.nick{font-family:var(--serif);font-style:italic;color:var(--rose);font-size:20px;margin:6px 0 16px}
+p{color:var(--muted);line-height:1.5}
+.q{font-family:var(--serif);font-size:26px;color:var(--ink);margin:6px 0 22px;line-height:1.2}
+.sticker{position:absolute;top:18px;right:14px;background:#f9cf86;color:#7b4a0d;font-size:11px;font-weight:700;padding:6px 12px;border-radius:12px;transform:rotate(6deg)}
+.row{display:flex;gap:12px;align-items:center;position:relative;height:54px}
+.btn{border:0;border-radius:999px;padding:14px 30px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:.25s}
+.yes{background:#3a1431;color:#fff;box-shadow:0 8px 20px rgba(58,20,49,.25)}
+.yes:hover{transform:translateY(-2px) scale(1.04)}
+.no{background:#fff;color:var(--ink);border:1.5px solid var(--ink);position:absolute;left:100px;transition:left .3s,top .3s,transform .3s}
+.wide{width:100%;margin-top:18px;background:#3a1431;color:#fff;border-radius:18px}
+.wide:disabled{opacity:.35;cursor:not-allowed}
+.note{font-size:13px;margin:26px 0 12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips span{font-size:11px;border:1px solid #ecd2d6;border-radius:999px;padding:5px 10px;color:var(--muted)}
+.center{text-align:center}.center p{margin:12px 0 22px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;border:2px solid transparent;border-radius:20px;padding:16px;margin-bottom:12px;cursor:pointer;text-align:left;font-family:inherit;transition:.25s;position:relative}
+.opt:hover{transform:translateY(-2px)}
+.opt .ic{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.7);display:grid;place-items:center;font-size:24px}
+.opt b{font-family:var(--serif);font-size:19px;font-weight:500;display:block;color:var(--ink)}
+.opt small{color:var(--muted);font-size:12px}
+.opt.sel{border-color:var(--rose);box-shadow:0 8px 22px rgba(155,44,85,.2)}
+.opt.sel:after{content:"✓";position:absolute;right:14px;top:14px;background:var(--rose);color:#fff;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:13px}
+.c1{background:var(--soft)}
+.c2{background:var(--lav)}
+.c3{background:var(--sun)}
+.c4{background:var(--mint)} /* Mint green color for Ice Cream */
+
+/* Calendar styling with Selectors */
+.cal{border:1px solid #f1dcdc;border-radius:20px;padding:16px;background:#fff}
+.cal-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.cal-selects{display:flex;gap:8px}
+.cal-select{padding:6px 10px;border-radius:10px;border:1.5px solid #ecd2d6;font-family:var(--serif);font-size:16px;font-weight:600;color:var(--ink);background:#fff;outline:none;cursor:pointer}
+.cal-select:focus{border-color:var(--rose)}
+.cal small{font-size:10px;letter-spacing:.14em;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;margin-top:12px;font-size:14px}
+.grid .h{font-size:10px;color:var(--muted);letter-spacing:.1em}
+.grid button{border:0;background:none;aspect-ratio:1;border-radius:50%;font-family:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+.grid button:hover{background:var(--soft)}
+.grid button.sel{background:var(--rose);color:#fff;font-weight:700}
+
+.time-input-wrap, .notes-wrap{margin-top:12px}
+.time-input, .notes-input{width:100%;padding:14px 16px;border-radius:14px;border:1.5px solid #ecd2d6;font-size:15px;font-family:inherit;outline:none;background:#fff;color:var(--ink);box-sizing:border-box;transition:border-color .2s}
+.notes-input{resize:vertical;min-height:75px}
+.time-input:focus, .notes-input:focus{border-color:var(--rose)}
+.badge{width:130px;height:130px;margin:0 auto 14px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:58px;animation:beat 1.4s infinite}
+@keyframes beat{50%{transform:scale(1.07)}}
+.quote{background:var(--sun);border-left:4px solid var(--rose);border-radius:14px;padding:14px;font-weight:700;margin:16px 0}
+.sum{border:1px solid #f1dcdc;border-radius:18px;background:#fff}
+.sum div{display:flex;justify-content:space-between;padding:14px 16px;border-bottom:1px solid #f6e6e6;font-size:14px}
+.sum div:last-child{border:0}.sum span{color:var(--muted);font-size:11px;letter-spacing:.12em}
+.sum b{font-family:var(--serif);font-weight:500;text-align:right;max-width:60%}
+.fin{display:flex;gap:16px;justify-content:center;align-items:center;margin-top:18px}
+.fin a{color:var(--rose);font-weight:700;font-size:13px;cursor:pointer;text-decoration:underline}
+.heart{position:fixed;bottom:-30px;pointer-events:none;animation:up 3s ease-in forwards;z-index:9}
+@keyframes up{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
